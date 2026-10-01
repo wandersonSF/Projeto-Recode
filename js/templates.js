@@ -32,7 +32,7 @@ export function templateInicio() {
             <div class="principal__imagem">
 
                 <img
-                    src="../img/jovens-estudando.png"
+                    src="../img/jovens-estudando.webp"
                     alt="Professor voluntário e alunos da ONG Recode sorrindo para a foto em uma sala de informática"
                 >
 
@@ -325,7 +325,7 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/movimento-comunicadoras-indigenas.png"
+                                    src="../img/movimento-comunicadoras-indigenas.webp"
                                     alt="Ilustração relacionada ao Movimento Comunicadoras Indígenas"
                                 >
                             </a>
@@ -374,7 +374,7 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/inpact-ai.png"
+                                    src="../img/inpact-ai.webp"
                                     alt="Ilustração relacionada ao projeto impactAI"
                                 >
                             </a>
@@ -423,9 +423,9 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/recode-pro-aldeia.png"
+                                    src="../img/recode-pro-aldeia.webp" srcset="../img/recode-pro-aldeia-400w.webp 400w, ../img/recode-pro-aldeia-600w.webp 600w" sizes="(max-width: 768px) 100vw, 600px"
                                     alt="Ilustração relacionada ao projeto Recode Pro Aldeia"
-                                >
+                                 width="700" height="700" loading="eager" fetchpriority="high">
                             </a>
 
                             <figcaption class="projeto__status projeto__status--realizado">
@@ -472,9 +472,9 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/estacao-hack.png"
+                                    src="../img/estacao-hack.webp" srcset="../img/estacao-hack-400w.webp 400w, ../img/estacao-hack-600w.webp 600w" sizes="(max-width: 768px) 100vw, 600px"
                                     alt="Ilustração relacionada ao projeto Estação Hack"
-                                >
+                                 width="700" height="700" loading="eager" fetchpriority="high">
                             </a>
 
                             <figcaption class="projeto__status projeto__status--realizado">
@@ -521,9 +521,9 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/games4good.png"
+                                    src="../img/games4good.webp" srcset="../img/games4good-400w.webp 400w, ../img/games4good-600w.webp 600w" sizes="(max-width: 768px) 100vw, 600px"
                                     alt="Ilustração relacionada ao projeto Games4Good"
-                                >
+                                 width="700" height="700" loading="eager" fetchpriority="high">
                             </a>
 
                             <figcaption class="projeto__status projeto__status--realizado">
@@ -570,9 +570,9 @@ export function templateProjetos() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="../img/recode-bibliotecas.png"
+                                    src="../img/recode-bibliotecas.webp" srcset="../img/recode-bibliotecas-400w.webp 400w, ../img/recode-bibliotecas-600w.webp 600w" sizes="(max-width: 768px) 100vw, 600px"
                                     alt="Ilustração relacionada ao projeto Recode Bibliotecas"
-                                >
+                                 width="700" height="700" loading="eager" fetchpriority="high">
                             </a>
 
                             <figcaption class="projeto__status projeto__status--realizado">

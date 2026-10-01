@@ -2720,3 +2720,684 @@ body::after {
     font-size: 16px;
     line-height: 1.6;
 }
+
+/* =========================================================
+   ACESSIBILIDADE — MODO ESCURO
+   ========================================================= */
+
+[data-tema="escuro"] {
+
+    /* Cores do modo escuro */
+    --fundo-escuro: #0d0d0d;
+    --fundo-escuro-2: #151515;
+
+    --superficie-escura: #1c1c1c;
+    --superficie-escura-2: #242424;
+
+    --borda-escura: #3d3d3d;
+
+    --texto-escuro: #ffffff;
+    --texto-secundario-escuro: #e5e5e5;
+
+    --sombra-escura:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.tema__botao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 12px;
+    padding: 12px 14px;
+
+    border: 0;
+    border-radius: 12px;
+
+    color: var(--roxo-escuro);
+    background-color: transparent;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.tema__botao:hover {
+    color: var(--roxo);
+    background-color: #f3eafb;
+}
+
+.tema__botao:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 3px;
+}
+
+[data-tema="escuro"] .tema__botao {
+    color: var(--texto-escuro);
+}
+
+[data-tema="escuro"] .tema__botao:hover {
+    color: var(--texto-escuro);
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* =========================================================
+   FUNDO PRINCIPAL
+   ========================================================= */
+
+[data-tema="escuro"] body {
+    color: var(--texto-escuro);
+
+    background:
+        linear-gradient(180deg, #000000 0%, #636363 100%);
+}
+
+
+/* =========================================================
+   CIRCUITO ELETRÔNICO
+   ========================================================= */
+
+[data-tema="escuro"] body::before {
+
+    /*
+       O circuito continua sendo animado,
+       mas fica mais discreto sobre o fundo escuro.
+    */
+    opacity: 0.14;
+}
+
+
+/* =========================================================
+   BRILHO TECNOLÓGICO
+   ========================================================= */
+
+[data-tema="escuro"] body::after {
+
+    /*
+       Mantém a animação do brilho,
+       reduzindo apenas sua intensidade.
+    */
+    opacity: 0.18;
+}
+
+
+/* =========================================================
+   TEXTOS
+   ========================================================= */
+
+[data-tema="escuro"] h1,
+[data-tema="escuro"] h2,
+[data-tema="escuro"] h3,
+[data-tema="escuro"] h4,
+[data-tema="escuro"] h5,
+[data-tema="escuro"] h6,
+[data-tema="escuro"] p,
+[data-tema="escuro"] li,
+[data-tema="escuro"] label,
+[data-tema="escuro"] address {
+
+    color: var(--texto-escuro);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+[data-tema="escuro"] .cabecalho {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+/* Logo */
+
+[data-tema="escuro"] .cabecalho__logo {
+    background-color: var(--branco-suave);
+    border-radius: 18px;
+    padding: 8px 12px;
+}
+
+[data-tema="escuro"] .cabecalho__logo::before {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+
+/* Links da navegação */
+
+[data-tema="escuro"] .navegacao__link {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .navegacao__link:hover {
+
+    color: var(--texto-escuro);
+
+    background-color: #303030;
+}
+
+
+/*
+   Mantém o último link com o gradiente original,
+   pois ele funciona como botão de destaque.
+*/
+
+[data-tema="escuro"] .navegacao__link:last-child {
+
+    color: var(--branco);
+
+    background: var(--gradiente-principal);
+}
+
+
+/* =========================================================
+   PÁGINA PRINCIPAL
+   ========================================================= */
+
+[data-tema="escuro"] .principal {
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+/* Destaque */
+
+[data-tema="escuro"] .principal__conteudo::before {
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* Título */
+
+[data-tema="escuro"] .principal__titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+/* Texto */
+
+[data-tema="escuro"] .principal__texto {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/* Imagem */
+
+[data-tema="escuro"] .principal__imagem img {
+
+    border-color: var(--superficie-escura);
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+   ========================================================= */
+
+[data-tema="escuro"] .titulo-secao {
+
+    color: var(--texto-escuro);
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+   ========================================================= */
+
+[data-tema="escuro"] .apresentacao__texto {
+
+    border-color: var(--borda-escura);
+
+    color: var(--texto-secundario-escuro);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .apresentacao__texto p {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+[data-tema="escuro"] .apresentacao__texto p:last-child {
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* =========================================================
+   METODOLOGIA
+   ========================================================= */
+
+[data-tema="escuro"] .metodologia__item {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .metodologia__item h3 {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .metodologia__item p {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/* =========================================================
+   APOIO
+   ========================================================= */
+
+/*
+   A seção de apoio já possui fundo escuro/roxo.
+   Mantemos o gradiente original para não retirar
+   sua identidade visual.
+*/
+
+[data-tema="escuro"] .apoio__cartao {
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+[data-tema="escuro"] .apoio__cartao p {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/* =========================================================
+   PÁGINA DE PROJETOS
+   ========================================================= */
+
+[data-tema="escuro"] .projetos-introducao__conteudo {
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .projetos-introducao__titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .projetos-introducao__descricao {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/*
+   A caixa lateral continua roxa,
+   funcionando como área de destaque.
+*/
+
+[data-tema="escuro"] .projetos-introducao__chamada {
+
+    color: var(--branco);
+}
+
+
+[data-tema="escuro"] .projetos-introducao__chamada h2 {
+
+    color: var(--branco);
+}
+
+
+[data-tema="escuro"] .projetos-introducao__chamada p {
+
+    color: #eeeeee;
+}
+
+
+/* =========================================================
+   LISTA DE PROJETOS
+   ========================================================= */
+
+[data-tema="escuro"] .lista-projetos .container {
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .lista-projetos__descricao {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/* =========================================================
+   CARDS DOS PROJETOS
+   ========================================================= */
+
+[data-tema="escuro"] .projeto {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura-2);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .projeto__titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .projeto__descricao {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/*
+   Links continuam utilizando a identidade roxa,
+   mas ficam claros no hover.
+*/
+
+[data-tema="escuro"] .projeto__link {
+
+    color: #ffffff;
+}
+
+
+[data-tema="escuro"] .projeto__link:hover {
+
+    color: var(--pink-claro);
+}
+
+
+/* =========================================================
+   PÁGINA DE CADASTRO
+   ========================================================= */
+
+[data-tema="escuro"] .cadastro__titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+/* Formulário */
+
+[data-tema="escuro"] .formulario {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+/* Legenda */
+
+[data-tema="escuro"] .formulario__legenda {
+
+    color: var(--texto-escuro);
+
+    border-color: var(--borda-escura);
+}
+
+
+/* Labels */
+
+[data-tema="escuro"] .formulario__campo label {
+
+    color: var(--texto-escuro);
+}
+
+
+/* Inputs */
+
+[data-tema="escuro"] .formulario__campo input {
+
+    border-color: var(--borda-escura);
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* Input em foco */
+
+[data-tema="escuro"] .formulario__campo input:focus {
+
+    border-color: var(--pink-claro);
+
+    color: var(--texto-escuro);
+
+    background-color: #2b2b2b;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 143, 195, 0.18);
+}
+
+
+/* Placeholder */
+
+[data-tema="escuro"] .formulario__campo input::placeholder {
+
+    color: #bdbdbd;
+}
+
+
+/* =========================================================
+   MENU RESPONSIVO
+   ========================================================= */
+
+[data-tema="escuro"] .menu__botao {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .menu__icone span {
+
+    background-color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .menu__botao:hover {
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* Painel */
+
+[data-tema="escuro"] .menu__painel {
+
+    border-color: var(--borda-escura);
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+/* Links */
+
+[data-tema="escuro"] .menu__link {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .menu__link:hover {
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* Títulos dos submenus */
+
+[data-tema="escuro"] .menu__titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .menu__titulo:hover {
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+[data-tema="escuro"] .menu__grupo[open] .menu__titulo {
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* Subitens */
+
+[data-tema="escuro"] .menu__subitem {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+[data-tema="escuro"] .menu__subitem:hover {
+
+    color: var(--texto-escuro);
+
+    background-color: var(--superficie-escura-2);
+}
+
+
+/* =========================================================
+   TELA DE CADASTRO CONCLUÍDO
+   ========================================================= */
+
+[data-tema="escuro"] .cadastro__sucesso {
+
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+[data-tema="escuro"] .cadastro__sucesso-conteudo {
+
+    background-color: var(--superficie-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+
+[data-tema="escuro"] .cadastro__sucesso-titulo {
+
+    color: var(--texto-escuro);
+}
+
+
+[data-tema="escuro"] .cadastro__sucesso-texto {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+[data-tema="escuro"] .rodape {
+
+    color: var(--texto-secundario-escuro);
+
+    background-color: #050505;
+}
+
+
+[data-tema="escuro"] .rodape__redes a {
+
+    color: var(--texto-secundario-escuro);
+}
+
+
+[data-tema="escuro"] .rodape p,
+[data-tema="escuro"] .rodape address {
+
+    color: #c8c8c8;
+}
+
+
+[data-tema="escuro"] .rodape__redes a:hover {
+
+    color: var(--texto-escuro);
+}
+
+
+/* =========================================================
+   FOCO — MODO ESCURO
+   ========================================================= */
+
+[data-tema="escuro"] .navegacao__link:focus-visible,
+[data-tema="escuro"] .botao:focus-visible,
+[data-tema="escuro"] .projeto__link:focus-visible,
+[data-tema="escuro"] .menu__botao:focus-visible,
+[data-tema="escuro"] .menu__link:focus-visible,
+[data-tema="escuro"] .menu__titulo:focus-visible,
+[data-tema="escuro"] .menu__subitem:focus-visible,
+[data-tema="escuro"] .cabecalho__logo:focus-visible {
+
+    outline-color: var(--amarelo);
+
+    box-shadow:
+        0 0 0 3px var(--pink);
+}

@@ -883,7 +883,7 @@ export function templateCadastro() {
 
                     <div class="formulario__acoes">
 
-                        <button type="submit">
+                        <button type="submit" class="botao botao--primario">
                             Cadastrar
                         </button>
 

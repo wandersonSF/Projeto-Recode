@@ -99,6 +99,20 @@ p {
     margin: 0 auto;
 }
 
+/* Foco para navegação por teclado */
+
+.navegacao__link:focus-visible,
+.botao:focus-visible,
+.projeto__link:focus-visible,
+.menu__botao:focus-visible,
+.menu__link:focus-visible,
+.menu__titulo:focus-visible,
+.menu__subitem:focus-visible,
+.cabecalho__logo:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 3px var(--pink);
+}
 
 /* =========================================================
    FUNDO DE CIRCUITO ELETRÔNICO

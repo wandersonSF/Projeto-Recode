@@ -3401,3 +3401,142 @@ body::after {
     box-shadow:
         0 0 0 3px var(--pink);
 }
+
+/* =========================================================
+   MINHA CONTA
+   ========================================================= */
+
+.conta {
+    padding: var(--espaco-6) 0 var(--espaco-7);
+    position: relative;
+    z-index: 1;
+}
+
+.conta__cabecalho {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.conta__destaque {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--branco);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.conta__titulo {
+    margin: 0;
+
+    color: var(--branco);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.conta__descricao {
+    margin: 14px 0 0;
+
+    color: var(--branco);
+
+    line-height: 1.6;
+}
+
+
+/* Formulário */
+
+.conta__formulario {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+
+/* Campos */
+
+.conta__campo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.conta__campo:first-child {
+    padding-top: 0;
+}
+
+.conta__rotulo {
+    color: var(--cinza);
+
+    font-weight: 700;
+}
+
+.conta__valor {
+    color: var(--preto);
+
+    text-align: right;
+}
+
+
+/* Botão */
+
+.conta__sair {
+    width: auto;
+    margin-top: 24px;
+}
+
+
+/* =========================================================
+   MINHA CONTA — MODO ESCURO
+   ========================================================= */
+
+[data-tema="escuro"] .conta__destaque,
+[data-tema="escuro"] .conta__titulo,
+[data-tema="escuro"] .conta__descricao {
+    color: var(--texto-escuro);
+}
+
+[data-tema="escuro"] .conta__formulario {
+    background-color: var(--superficie-escura);
+
+    border-color: var(--borda-escura);
+
+    box-shadow: var(--sombra-escura);
+}
+
+[data-tema="escuro"] .conta__campo {
+    border-color: var(--borda-escura);
+}
+
+[data-tema="escuro"] .conta__rotulo {
+    color: var(--texto-secundario-escuro);
+}
+
+[data-tema="escuro"] .conta__valor {
+    color: var(--texto-escuro);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .conta__campo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .conta__valor {
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+}

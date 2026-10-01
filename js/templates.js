@@ -901,27 +901,69 @@ export function templateConta(dados) {
     return `
         <section class="conta">
             <div class="container">
+
                 <div class="conta__cabecalho">
                     <span class="conta__destaque">Minha conta</span>
 
                     <h1 class="conta__titulo">
-                        Dados cadastrais
+                        Meus dados
                     </h1>
+
+                    <p class="conta__descricao">
+                        Confira os dados cadastrados na sua conta.
+                    </p>
                 </div>
 
-                <div class="conta__dados">
-                    <p><strong>Nome:</strong> ${dados.nome}</p>
-                    <p><strong>Sobrenome:</strong> ${dados.sobrenome}</p>
-                    <p><strong>CPF:</strong> ${dados.cpf}</p>
-                    <p><strong>E-mail:</strong> ${dados.email}</p>
-                    <p><strong>Telefone:</strong> ${dados.telefone}</p>
-                    <p><strong>CEP:</strong> ${dados.cep}</p>
-                    <p><strong>Endereço:</strong> ${dados.endereco}</p>
+                <div class="formulario">
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">Nome</span>
+                        <span class="conta__valor">${dados.nome}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">Sobrenome</span>
+                        <span class="conta__valor">${dados.sobrenome}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">CPF</span>
+                        <span class="conta__valor">${dados.cpf}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">E-mail</span>
+                        <span class="conta__valor">${dados.email}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">Telefone</span>
+                        <span class="conta__valor">${dados.telefone}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">CEP</span>
+                        <span class="conta__valor">${dados.cep}</span>
+                    </div>
+
+                    <div class="conta__campo">
+                        <span class="conta__rotulo">Endereço</span>
+                        <span class="conta__valor">${dados.endereco}</span>
+                    </div>
+
+                    <div class="botao--centralizado">
+
+                        <button
+                            type="button"
+                            class="botao botao--primario conta__sair"
+                        >
+                            Sair da conta
+                        </button>
+
+                    </div>
+
                 </div>
 
-                <button type="button" class="conta__sair">
-                    Sair da conta
-                </button>
             </div>
         </section>
     `;

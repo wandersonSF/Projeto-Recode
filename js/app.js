@@ -56,6 +56,8 @@ function configurarBotaoSair() {
     });
 }
 
+aplicarTema();
+
 function renderizar(pagina) {
 
     if (pagina === "#inicio") {
@@ -110,3 +112,67 @@ const paginaAtual = window.location.hash || "#inicio";
 
 renderizar(paginaAtual);
 atualizarNavegacao();
+
+function aplicarTema() {
+    const temaSalvo = localStorage.getItem("temaRecode");
+
+    if (temaSalvo === "escuro") {
+        document.documentElement.setAttribute("data-tema", "escuro");
+    } else {
+        document.documentElement.removeAttribute("data-tema");
+    }
+}
+
+configurarBotaoTema();
+
+function configurarBotaoTema() {
+    const botaoTema = document.querySelector("#botao-tema");
+
+    if (!botaoTema) {
+        return;
+    }
+
+    const temaEscuro = document.documentElement.getAttribute("data-tema") === "escuro";
+
+    atualizarBotaoTema(botaoTema, temaEscuro);
+
+    botaoTema.addEventListener("click", () => {
+        const ativarEscuro =
+            document.documentElement.getAttribute("data-tema") !== "escuro";
+
+        if (ativarEscuro) {
+            document.documentElement.setAttribute("data-tema", "escuro");
+            localStorage.setItem("temaRecode", "escuro");
+        } else {
+            document.documentElement.removeAttribute("data-tema");
+            localStorage.setItem("temaRecode", "claro");
+        }
+
+        atualizarBotaoTema(botaoTema, ativarEscuro);
+    });
+}
+
+
+function atualizarBotaoTema(botaoTema, temaEscuro) {
+    const icone = botaoTema.querySelector("span");
+
+    if (temaEscuro) {
+        botaoTema.setAttribute("aria-label", "Ativar modo claro");
+        botaoTema.setAttribute("title", "Ativar modo claro");
+
+        if (icone) {
+            icone.textContent = "☀️";
+        }
+
+        botaoTema.lastElementChild.textContent = "Modo claro";
+    } else {
+        botaoTema.setAttribute("aria-label", "Ativar modo escuro");
+        botaoTema.setAttribute("title", "Ativar modo escuro");
+
+        if (icone) {
+            icone.textContent = "🌙";
+        }
+
+        botaoTema.lastElementChild.textContent = "Modo escuro";
+    }
+}
